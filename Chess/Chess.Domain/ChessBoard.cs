@@ -20,8 +20,7 @@ namespace Chess.Domain
 
         public bool IsLegalBoardPosition(int xCoordinate, int yCoordinate)
         {
-            throw new NotImplementedException("Need to implement ChessBoard.IsLegalBoardPosition()");
-        }
-
+			return (xCoordinate >= 0 && xCoordinate <= 7) && (yCoordinate >= 0 && yCoordinate <= 7);
+        }	
     }
 }
