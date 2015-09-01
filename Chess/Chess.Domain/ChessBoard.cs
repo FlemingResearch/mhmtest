@@ -14,9 +14,14 @@ namespace Chess.Domain
         }
 
         public void Add(Pawn pawn, int xCoordinate, int yCoordinate, PieceColor pieceColor)
-        {
-            throw new NotImplementedException("Need to implement ChessBoard.Add()");
-        }
+        {		
+			if (IsLegalBoardPosition(xCoordinate, yCoordinate))
+			{					
+				pawn.XCoordinate = xCoordinate;
+				pawn.YCoordinate = yCoordinate;
+				pieces[xCoordinate, yCoordinate] = pawn;
+            }	
+		}
 
         public bool IsLegalBoardPosition(int xCoordinate, int yCoordinate)
         {
