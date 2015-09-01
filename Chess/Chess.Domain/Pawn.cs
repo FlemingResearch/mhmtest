@@ -40,8 +40,20 @@ namespace Chess.Domain
 
         public void Move(MovementType movementType, int newX, int newY)
         {
-            throw new NotImplementedException("Need to implement Pawn.Move()");
-        }
+			if (newX != _xCoordinate) //pawns only move in the Y axis, direction chosen by color, magnitude is always 1 as there is no starting jump rule in this game of 'chess'
+				return; // I feel like throwing an exception here, but that aint in the spec.
+
+			if(_pieceColor == PieceColor.Black) //black decreases y to move forward
+			{
+				if (newY < _yCoordinate && Math.Abs(newY - _yCoordinate) == 1)
+					_yCoordinate = newY;
+			}
+			else // white increases y to move forward
+			{
+				if (newY > _yCoordinate && Math.Abs(newY - _yCoordinate) == 1)
+					_yCoordinate = newY;
+			}			 
+		}
 
         public override string ToString()
         {
