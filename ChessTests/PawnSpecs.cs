@@ -1,7 +1,7 @@
-﻿using NUnit.Framework;
-using NUnit.Framework.SyntaxHelpers;
+﻿using Chess.Domain;
+using NUnit.Framework;					
 
-namespace Chess.Domain
+namespace ChessTests
 {
     [TestFixture]
     public class When_creating_a_chess_board
@@ -175,5 +175,4 @@ namespace Chess.Domain
         }
 
     }
-
 }
