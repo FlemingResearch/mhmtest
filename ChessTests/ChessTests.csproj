@@ -49,7 +49,7 @@
   <ItemGroup>
     <Compile Include="ChessBoardTests.cs" />
     <Compile Include="BaseTestContext.cs" />
-    <Compile Include="PawnSpecs.cs" />
+    <Compile Include="PawnTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
